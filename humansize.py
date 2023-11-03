@@ -15,11 +15,27 @@ def approximate_size(size, a_kilobyte_is_1024_bytes=True):
         size /= multiple
         if size < multiple:
             return '{0:.1f} {1}'.format(size, suffix)
-
+            
     raise ValueError('number too large')
-
-
+    
+    
 if __name__ == '__main__':
-    print(approximate_size(1000000000000, False))
-    print(approximate_size(1000000000000))
-
+    print(approximate_size(1000, False))
+    print(approximate_size(1000000, False))
+    print(approximate_size(1000000000, False))
+    print(approximate_size(1000, False))
+    print(approximate_size(1000))
+    print(approximate_size(1000000, True))
+    
+    
+    
+    
+'''
+    1.0 KB
+    1.0 MB
+    1.0 GB
+    1.0 KB
+    1.0 KiB
+    976.6 KiB
+    
+'''
